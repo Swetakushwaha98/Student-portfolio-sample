@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Student Portfolio">
+    <meta name="author" content="Sweta Kushwaha">
+    <title>Student Portfolio</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --max-width: 1728px;
+        --primary-color: #0030CC;
+        --secondery-color: #F00;
+        --normal-font-family: "Nunito Sans";
+        --normal-font-size: 16px;
+        --large-font-size: 24px;
+        --light-font-weight: 400;
+        --bold-font-weight: 700;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 1100px;
+        height: auto;
+        margin: auto;
+        border-radius: 20px;
+        border: 1px solid #0095FF;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+        margin-bottom: 25px;
+    }
+
+    .outer_container {
+        width: 1100px;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .student_portfolio {
+        width: 100%;
+        height: auto;
+        background-image: url(./bg.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Nunito Sans", sans-serif;
+        padding: 30px 0;
+    }
+
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 46px;
+        padding: 0px 0 30px 0;
+        text-align: center;
+        font-family: "Minion Pro";
+        color: #000;
+    }
+
+    .heading .heading_text h4 {
+        font-size: var(--large-font-size);
+        font-weight: var(--bold-font-weight);
+    }
+
+    .heading .heading_text p {
+        font-size: var(--normal-font-size);
+        font-weight: var(--light-font-weight);
+    }
+
+    .brand_logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .brand_logo {
+        position: relative;
+    }
+
+    .brand_logo::after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        z-index: 1;
+        width: 40px;
+        border: 1px solid var(--secondery-color);
+        rotate: -90deg;
+    }
+
+    .heading .heading_text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .family_details .container {
+        display: flex;
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        color: #000;
+        text-align: center;
+        /* margin-bottom: 25px; */
+    }
+
+    .family_details h2,
+    .teacher_details h1 {
+        font-size: 20px;
+        font-weight: var(--bold-font-weight);
+        line-height: 141.182%;
+        position: relative;
+    }
+
+    .family_details h2::after,
+    .teacher_details h1::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 6%;
+        z-index: 1;
+        width: 116px;
+        border: 1px solid var(--secondery-color);
+    }
+
+    .about h6 {
+        font-size: var(--normal-font-size);
+        line-height: 150%;
+    }
+
+    .about h6 span {
+        display: inline-block;
+        min-width: 95px;
+        text-align: left;
+        font-weight: var(--light-font-weight);
+    }
+
+
+    .family_details .family_info {
+        display: flex;
+        width: 1042px;
+        justify-content: space-between;
+        align-items: start;
+        align-content: center;
+        row-gap: 28px;
+        flex-wrap: wrap;
+    }
+
+    .family_details .family_info .person_photo img,
+    .student_photo img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    .family_details .family_info .details {
+        display: flex;
+        width: 475px;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .family_details .family_info .about {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .family_info .person_info h1 {
+        color: #0030CC;
+        font-size: 20px;
+        font-weight: var(--bold-font-weight);
+        text-align: left;
+    }
+
+    .family_info .person_info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .student_about .container {
+        border: 1px solid #F00;
+        display: flex;
+        width: 1102px;
+        padding: 20px 25px;
+        flex-direction: column;
+        gap: 30px;
+
+
+    }
+
+    .student_name h1 {
+        color: var(--secondery-color);
+        font-size: var(--large-font-size);
+        font-weight: var(--bold-font-weight);
+        width: 759px;
+    }
+
+    .student_about .student_info {
+        display: flex;
+        width: 907px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 10px 104px;
+        flex-wrap: wrap;
+
+    }
+
+    .student_offical_info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+    }
+
+    .student_about .student_all_info {
+        display: flex;
+        gap: 25px;
+    }
+
+    .about h6 span:first-child,
+    .student_details h6 span:first-child,
+    .student_details_more h6 span:first-child {
+        font-weight: var(--bold-font-weight);
+    }
+
+    .student_details h6,
+    .student_details_more h6 {
+        font-size: var(--normal-font-size);
+        line-height: 150%;
+    }
+
+    .student_details h6 span {
+        display: inline-block;
+        min-width: 70px;
+        text-align: left;
+        font-weight: var(--light-font-weight);
+    }
+
+    .student_details_more h6 span {
+        display: inline-block;
+        min-width: 155px;
+        text-align: left;
+        font-weight: var(--light-font-weight);
+    }
+
+    .student_about .about_student {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .student_about .about_student .blood,
+    .student_about .about_student .transport,
+    .student_about .about_student .hostel {
+        display: flex;
+        width: 325px;
+        padding: 5px 15px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 12px;
+        border: 1px solid #77E7FF;
+        background: #EFF;
+    }
+
+    .student_about .about_student .blood p,
+    .student_about .about_student .transport p,
+    .student_about .about_student .hostel p {
+        font-weight: var(--bold-font-weight);
+    }
+
+    .student_about .about_student .blood span,
+    .student_about .about_student .transport span,
+    .student_about .about_student .hostel span {
+        font-weight: var(--light-font-weight);
+    }
+
+    .teacher_details .container {
+        display: flex;
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .teacher_details .container .teacher_info {
+        display: flex;
+        width: 1024px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 31px 58px;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+
+    .teacher_details .teacher_info .teacher_naming {
+        display: flex;
+        width: 300px;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .teacher_details .teacher_info .teacher_naming .about_teacher {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: start;
+    }
+
+    .teacher_details .teacher_info .teacher_naming .about_teacher h4 {
+        font-size: 18px;
+        font-weight: var(--bold-font-weight);
+    }
+
+    .activity {
+        display: flex;
+        width: 340px;
+        height: 378px;
+        padding: 16px 26px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        border-radius: 20px;
+        border: 1px solid #C4C4C4;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+        text-align: center;
+    }
+
+    .attendance {
+        width: auto;
+        border-radius: 20px;
+        border: 1px solid #C4C4C4;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+        text-align: center;
+        padding: 16px 26px;
+    }
+
+    .activity h2 {
+        font-size: 18px;
+        font-weight: var(--bold-font-weight);
+        position: relative;
+    }
+
+    /* .activity h2::after {
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 6%;
+        z-index: 1;
+        width: 187px;
+        border: 1px solid #DCDCE5;
+    } */
+
+    .activity .extra_activity .student_activity {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .activity .extra_activity .student_activity p {
+        font-size: var(--normal-font-size);
+        font-weight: 400;
+    }
+
+    .activity .extra_activity {
+        display: flex;
+        width: 250px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .activity .documents_download {
+        display: flex;
+        height: 35px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #CCC;
+        width: 100%;
+    }
+
+    .activity .choice_doc {
+        display: flex;
+        width: 259px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .highcharts-credits {
+        display: none;
+    }
+
+    #attendance_chart {
+        height: 344px;
+        width: 665px;
+    }
+
+    @media screen and (max-width: 1120px) {
+
+        .outer_container,
+        .student_about .container,
+        .container,
+        .student_name h1,
+        .teacher_details .container .teacher_info {
+            width: 100%;
+            justify-content: space-around;
+
+        }
+
+        .student_about .about_student .blood,
+        .student_about .about_student .transport,
+        .student_about .about_student .hostel {
+            width: 100%;
+        }
+
+        .student_about .about_student {
+            display: flex;
+            gap: 20px;
+        }
+
+        .student_about .student_info {
+            width: 100%;
+            gap: 10px 40px;
+        }
+
+        .student_portfolio {
+            padding: 20px;
+        }
+
+        .activity {
+            width: auto;
+        }
+
+        .family_details .family_info {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .attendance,
+        .family_details .family_info .details {
+            width: 100%;
+
+        }
+        #attendance_chart {
+        height: 344px;
+        width: auto;
+    }
+
+    }
+
+    @media screen and (max-width: 900px) {
+        .family_details .family_info {
+            grid-template-columns: 1fr;
+        }
+
+        .outer_container {
+            justify-content: center;
+        }
+
+        .student_about .about_student {
+            font-size: 14px;
+        }
+
+
+    }
+    @media screen and (max-width: 824PX){
+    .student_details_more h6 span,
+        .student_details h6 span {
+            min-width: 122px;
+        }
+        
+    }
+
+
+    @media screen and (max-width: 700px) {
+        #attendance_chart {
+            height: 344px;
+            width: 100%;
+        }
+
+        .student_about .about_student .blood,
+        .student_about .about_student .transport,
+        .student_about .about_student .hostel {
+            width: 100%;
+        }
+
+        .student_about .about_student {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 500px) {
+        .heading {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding-bottom: 15px;
+        }
+
+        .brand_logo::after {
+            display: none;
+        }
+
+        .student_about .student_all_info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+  
+        .about h6 span {
+            min-width: 85px;
+
+        }
+        .student_details_more h6 span,
+        .student_details h6 span {
+            font-size: 14px;
+        }
+
+        .activity {
+            width: 100%;
+        }
+
+
+        .family_details .family_info .details {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .family_details .family_info {
+            gap: 14px;
+        }
+
+     
+
+        .student_about .container {
+            padding: 15px;
+        }
+
+        .student_name {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+
+    }
+
+    @media print {
+        @page {
+            size: portrait
+        }
+
+        .student_portfolio {
+            padding: 30px;
+            height: 200vh;
+        }
+
+        .container,
+        .student_about .container,
+        .outer_container,
+        .family_details .family_info , .teacher_details .container .teacher_info{
+            width: 100%;
+        }
+
+        .outer_container {
+          padding-top: 50px;
+            justify-content: center;
+        }
+        .teacher_details{
+            margin-bottom: 220px;
+        }
+
+        .container {
+            margin-bottom: 50px;
+        }
+
+        .family_details .family_info .details {
+            width: auto;
+        }
+
+        .activity {
+            width: 47%;
+            border: 1px solid black;
+        }
+        .teacher_details .teacher_info .teacher_naming{
+            width: 280px;
+        }
+        .attendance{
+            border: 1px solid black;
+        }
+    
+
+    }
+</style>
+
+<body>
+    <div class="student_portfolio">
+        <div class="heading">
+            <div class="brand_logo">
+                <!-- <img src="./brand_logo.png" alt="brand logo"> -->
+                 <p style="
+                 font-size: 30px;
+                 margin-left: -92px;
+             ">LOGO</p>
+            </div>
+            <div class="heading_text">
+                <h4>Student Portfolio</h4>
+                <p>Academic Year 2024-2025</p>
+            </div>
+        </div>
+
+        <section class="student_about">
+            <div class="container">
+                <div class="student_all_info">
+                    <div class="student_photo">
+                        <img src="./person_photo.jpg" alt="student photo">
+                    </div>
+
+                    <div class="student_offical_info">
+                        <div class="student_name">
+                            <h1>Sweta kushwaha</h1>
+                        </div>
+                        <div class="student_info">
+
+                            <div class="student_details">
+                                <h6><span>Class</span> :&nbsp;<span VII </span>
+                                </h6>
+                                <h6><span>Roll No.</span> :&nbsp;<span>+91 9876543210</span> </h6>
+                                <h6><span>D.O.B.</span> :&nbsp; <span>01/05/2003</span> </h6>
+                                <h6><span>Phone</span> :&nbsp; <span>+91 9876543210</span> </h6>
+                            </div>
+
+                            <div class="student_details_more">
+                                <h6><span>Admission ID</span> :&nbsp;<span>58246 </span>
+                                </h6>
+                                <h6><span>Date of Admission</span> :&nbsp;<span>10/08/2024</span> </h6>
+                                <h6><span>Class of Admission</span> :&nbsp; <span>VII</span> </h6>
+                                <h6><span>Address</span> :&nbsp; <span>Lorem ipsum sit amet.</span> </h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="about_student">
+                    <div class="blood">
+                        <img src="./icons/health.png" alt=" health icon">
+                        <p>Blood Group - <span> B+</span></p>
+                    </div>
+                    <div class="transport">
+                        <img src="./icons/transport.png" alt=" transport icon">
+                        <p>Transport Details - <span>Route number Abcc*1895</span></p>
+                    </div>
+                    <div class="hostel">
+                        <img src="./icons/library.png" alt=" hostel icon">
+                        <p>Hostel Details - <span>Boys Hostel 2</span></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="family_details">
+            <div class="container">
+                <h2>Parent Details</h2>
+
+                <div class="family_info">
+                    <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about">
+                                <h6><span>Occupation</span> :&nbsp;<span>Business Owner </span>
+                                </h6>
+                                <h6><span>Contact</span> :&nbsp;<span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about  ">
+                                <h6><span>Occupation</span> :&nbsp;<span>Business Owner</span></h6>
+                                <h6><span>Contact</span> :&nbsp; <span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Guardian Details</h2>
+
+                <div class="family_info">
+                    <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about">
+                                <h6><span>Occupation</span> :&nbsp;<span>Business Owner </span>
+                                </h6>
+                                <h6><span>Contact</span> :&nbsp;<span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about  ">
+                                <h6><span>Occupation</span> :&nbsp;<span>Business Owner</span></h6>
+                                <h6><span>Contact</span> :&nbsp; <span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Sibling Details</h2>
+
+                <div class="family_info">
+                    <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about">
+                                <h6><span>Occupation</span> :&nbsp;<span>Business Owner </span>
+                                </h6>
+                                <h6><span>Contact</span> :&nbsp;<span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="details">
+                        <div class="person_photo">
+                            <img src="./person_photo.jpg" alt="person photo">
+                        </div>
+                        <div class="person_info">
+                            <h1>Amarjeet Singh Chouhan</h1>
+                            <div class="about  ">
+                                <h6><span>Occupation</span> :&nbsp;<span class="student_name">Business Owner</span></h6>
+                                <h6><span>Contact</span> :&nbsp; <span>+91 9876543210</span> </h6>
+                                <h6><span>Relation</span> :&nbsp; <span>Father</span> </h6>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="teacher_details">
+            <div class="container">
+                <h1>Teacher’s Details</h1>
+                <div class="teacher_info">
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                    <div class="teacher_naming">
+                        <img src="./icons/tecaher.png" alt="teacher image ">
+                        <div class="about_teacher">
+                            <h4>Teacher name here</h4>
+                            <p>Maths Teacher</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="outer_container">
+            <section class="activity">
+                <figure class="highcharts-figure">
+                    <div id="academic_fee" style="height: 344px; width: 260px;"></div>
+
+                </figure>
+            </section>
+            <section class="activity">
+                <h2>Extra-curricular Activities</h2>
+                <div class="extra_activity">
+                    <div class="student_activity">
+                        <img src="./icons/Badminton.png" alt="activity icon">
+                        <p>Badminton</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Cricket.png" alt="activity icon">
+                        <p>Cricket</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Guitar.png" alt="activity icon">
+                        <p>Guitar</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Drawing.png" alt="activity icon">
+                        <p>Drawing</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Singing.png" alt="activity icon">
+                        <p>Singing</p>
+                    </div>
+                </div>
+            </section>
+            <section class="activity">
+                <h2>Documents</h2>
+                <div class="choice_doc">
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+
+                    <div class="documents_download">
+                        <p>Document name here</p>
+                        <img src="./icons/download.png" alt=" download icon">
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="activity">
+                <h2>Hobbies & interest</h2>
+                <div class="extra_activity">
+                    <div class="student_activity">
+                        <img src="./icons/Badminton.png" alt="activity icon">
+                        <p>Badminton</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Cricket.png" alt="activity icon">
+                        <p>Cricket</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Guitar.png" alt="activity icon">
+                        <p>Guitar</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Drawing.png" alt="activity icon">
+                        <p>Drawing</p>
+                    </div>
+                    <div class="student_activity">
+                        <img src="./icons/Singing.png" alt="activity icon">
+                        <p>Singing</p>
+                    </div>
+                </div>
+            </section>
+            <section class="attendance">
+                <figure class="highcharts-figure">
+                    <div id="attendance_chart"></div>
+
+                </figure>
+            </section>
+
+        </div>
+
+    </div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+        Highcharts.chart('attendance_chart', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Attendance',
+                align: 'left'
+
+            },
+            xAxis: {
+                categories: ['Arsenal', 'Chelsea', 'Liverpool', 'Manchester United']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Count trophies'
+                },
+                stackLabels: {
+                    enabled: true
+                }
+            },
+            legend: {
+                align: 'left',
+                x: 70,
+                verticalAlign: 'top',
+                y: 70,
+                floating: true,
+                backgroundColor:
+                    Highcharts.defaultOptions.legend.backgroundColor || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            tooltip: {
+                headerFormat: '<b>{point.x}</b><br/>',
+                pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            series: [{
+                name: 'BPL',
+                data: [3, 5, 1, 13]
+            }, {
+                name: 'FA Cup',
+                data: [14, 8, 8, 12]
+            }, {
+                name: 'CL',
+                data: [0, 2, 6, 3]
+            }]
+        });
+        // academic_fee
+        Highcharts.chart('academic_fee', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Academic Fee',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Secondary text',
+                align: 'left'
+            },
+
+            accessibility: {
+                announceNewData: {
+                    enabled: true
+                },
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.y:.1f}%', // Show both name and percentage
+                        distance: -50, // Negative value to place the label on the circle
+                        style: {
+                            fontSize: '12px',
+                            textOutline: 'none',
+                            color: '#ffffff'
+                        }
+                    },
+                    borderRadius: 5
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: ' +
+                    '<b>{point.y:.2f}%</b> of total<br/>'
+            },
+
+            series: [
+                {
+                    name: 'Browsers',
+                    colorByPoint: true,
+                    data: [
+                        {
+                            name: 'Paid',
+                            y: 80,
+                            drilldown: 'paid'
+                        },
+                        {
+                            name: '',
+                            y: 20,
+                            drilldown: ''
+                        }
+
+                    ]
+                }
+            ],
+
+        });
+
+    </script>
+</body>
+
+</html>
