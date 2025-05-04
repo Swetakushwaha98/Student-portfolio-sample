@@ -1,2 +1,2 @@
 # Student-portfolio-sample
-Student Portfolio Sample with chats
+Student Portfolio Sample with chats fully responsive also print
